@@ -11,7 +11,7 @@ const Comment = (props) => {
             <p>{ message }</p>
             <p>{ date.toString() }</p>
         </div>
-    )
-}
+    );
+};
 
 export default Comment;
