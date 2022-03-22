@@ -1,11 +1,15 @@
 import "./Comment.css";
 
-const Comment = () => {
+const Comment = (props) => {
+    const {name, email, message, date} = props;
+
+    console.log(props);
     return (
         <div className="comment">
-            <h2>William Dias</h2>
-            <p>Eu estou aprendendo React com o Jonathan</p>
-            <p>22/03/2022</p>
+            <h2>{ name }</h2>
+            <p>{ email }</p>
+            <p>{ message }</p>
+            <p>{ date.toString() }</p>
         </div>
     )
 }
