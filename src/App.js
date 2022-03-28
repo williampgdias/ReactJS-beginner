@@ -49,8 +49,34 @@ class App extends React.Component {
               message= { comment. message }
             />
           );
-        }) }
-        <button onClick={ this.addComment }>Adicionar comentário</button>
+        })}
+
+        <form>
+          <h2>Add a comment</h2>
+          <div>
+            <input
+              type="text"
+              name="name"
+              placeholder="Type here your name" 
+            />
+          </div>
+          <div>
+            <input
+              type="email"
+              name="email"
+              placeholder="Type here tour email"
+            />
+          </div>
+          <div>
+            <textarea 
+              name="message" 
+              rows="4"
+              placeholder="Type here your message"
+            />
+          </div>
+          <button onClick={ this.addComment }>Adicionar comentário</button>
+        </form>
+
         
       </div>
     );
