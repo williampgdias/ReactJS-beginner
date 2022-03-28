@@ -3,7 +3,6 @@ import "./Comment.css";
 const Comment = (props) => {
     const {name, email, message, date} = props;
 
-    console.log(props);
     return (
         <div className="comment">
             <h2>{ name }</h2>
