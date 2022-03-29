@@ -48,6 +48,16 @@ class App extends React.Component {
 
     this.setState({
       form: newCommentForm,
+    });
+  };
+
+  deleteComment = (comment) => {
+    const filteredList = this.state.comments.filter((commentFilter) => {
+      return comment !== commentFilter;
+    });
+
+    this.setState({
+      comments: filteredList
     })
   }
 
@@ -59,10 +69,11 @@ class App extends React.Component {
           return (
             <Comment 
               key = { index }
-              name= { comment.name }
-              email= { comment.email }
-              date= { comment.date }
-              message= { comment. message }
+              name = { comment.name }
+              email = { comment.email }
+              date = { comment.date }
+              message = { comment. message }
+              onDeleteComment = {() => {this.deleteComment(comment)}}
             />
           );
         })}
