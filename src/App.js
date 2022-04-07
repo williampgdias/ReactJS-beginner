@@ -80,7 +80,7 @@ class App extends React.Component {
         })}
 
         <CommentForm
-          onaddComment = { this.addComment }
+          onAddComment = { this.addComment }
           onFieldChanged = { this.onFieldChanged } 
           form = { this.state.form }
         />
